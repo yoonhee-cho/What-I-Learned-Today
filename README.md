@@ -42,7 +42,7 @@
 
 - [ ] D3 for interactive charts
 
-> ### TypeScript 
+> ### TypeScript 📓
 
 - [ ] TypeScript 드림코딩강의 
 

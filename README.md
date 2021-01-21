@@ -1,4 +1,4 @@
-# What-I-Learned-Today 🍚
+# What-Yoon-Learned-Today 🍚
 ### Collection of notes and stuffs I learn everyday to become a full stack developer 🌿👩🏻‍💻👩🏻‍🍳👩🏻‍🌾🌱
 
 ---

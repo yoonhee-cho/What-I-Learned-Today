@@ -6,8 +6,9 @@
 ## 💡 2021's Goal
 
 ```
-- Expanding backend knowledge
 - Sharpening frontend skills for responsive design
+- Making fun & detailed UX interactive prototype
+- Expanding backend knowledge
 - Study data structures & algorithms
 - Learning TypeScript & Python
 - Get used to TDD methods

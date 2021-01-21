@@ -16,8 +16,7 @@
 
 ---
 
-> ## Study goals 📝
-
+> ## Study goals ✏️
 > ### Frontend 🖥
 
 - [ ] HTML semantic tags
@@ -25,6 +24,7 @@
 - [ ] CSS Flexbox
 - [ ] Vue
 - [ ] Bootstrap & Material UI
+- [ ] Animation using vanila JavaScript 
 
 > ### Backend ⚙️
 
@@ -42,9 +42,9 @@
 
 - [ ] D3 for interactive charts
 
-> ### Rust 🦀
+> ### TypeScript 
 
-- [ ] WebGL
+- [ ] TypeScript 드림코딩강의 
 
 > ### Testing ✅
 
@@ -53,4 +53,5 @@
 
 > ### Debugging cheat sheet 🐛
 
-- [Most frequent bugs]
+- [ ] A doc to contain the most frequent bugs
+

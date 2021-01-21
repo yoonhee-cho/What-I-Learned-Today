@@ -9,7 +9,7 @@
 - Expanding backend knowledge
 - Sharpening frontend skills for responsive design
 - Study data structures & algorithms
-- Learning low level language
+- Learning TypeScript & Python
 - Get used to TDD methods
 ```
 

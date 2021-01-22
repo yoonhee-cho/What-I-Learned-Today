@@ -1,4 +1,4 @@
-#Bubble Sort
+# Bubble Sort
     - starting from the first element in the arr, keep comparing current element with the next element(so the range of for loop can stop right before the last idx as we need to compare it with the next el). If the current el is greater than the next el, swap the order. At the end, the last element in the arr is the greatest el within the arr.
     -That means the last element is sorted so, we don't need to consider the element for the next loop
     -In order to run for loop without the sorted elements, we need to make a variable called sortedElIdx and set it equal to arr.length -1 (last idx of the arr) in the beginning, and decreases by 1, everytime the entire for loop iterates

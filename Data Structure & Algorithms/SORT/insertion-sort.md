@@ -27,7 +27,7 @@ function insertionSort(arr){
     return arr
 }
 ```
-   not sorted arr's els
+   <!-- not sorted arr's els
    -----
 [6,3,2,1]
  -
@@ -55,4 +55,4 @@ compare 6 & 3 -> 6 is greater than 3 -> swap! ->
  compare 6 & 1 -> 6 is greater than 1 -> swap! 
 [2,3,1,6]-> j is now 2 -> 3 is greater than 1 -> swap! 
 [2,1,3,6]-> j is now 1 -> 2 is greater than 1 -> swap!
-[1,2,3,6]-> j is now 0 (out of while loop)
+[1,2,3,6]-> j is now 0 (out of while loop) -->

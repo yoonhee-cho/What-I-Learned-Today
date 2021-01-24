@@ -1,11 +1,11 @@
 # Insertion Sort
 
 - Assume that first el in the arr is sorted arr's element
-- Start comparing the second el with the prev el(first el)
-- If the first el is greater than the next el (not sorted) then, swap the order
+- Start comparing the second el with the first el
+- If the first el is greater than the second el (not sorted) then, swap the order
 - so the first and secon el are now sorted
-- compare curr el(third el) with the prev el and if the prev el is greater than curr el, swap the order. while index > 0 and not sorted, keep swap.
-- move on the next el
+- compare third el with the second el and if the second el is greater than third el, swap the order. while index > 0 and not sorted, keep swap.
+- move on the fourth el do the samething
 
 - the reason why name of the insertion sort is insertion sort is that while comparing the elements, it INSERTs the el to compare in the sorted el and if the order is not sorted, swap keeps happening until it is sorted.
 
@@ -28,7 +28,7 @@ function insertionSort(arr){
 }
 ```
    not sorted arr's els
-   _____
+   -----
 [6,3,2,1]
  -
  consider 6 is sorted arr's el
@@ -37,7 +37,7 @@ compare 6 & 3 -> 6 is greater than 3 -> swap! ->
 [3,6,2,1] j is now 0 (out of while loop)
 
      not sorted arr's els
-     ___
+     ---
 [3,6,2,1]
  ---
  sorted arr's els
@@ -47,7 +47,7 @@ compare 6 & 3 -> 6 is greater than 3 -> swap! ->
 [2,3,6,1]-> j is now 0 (out of while loop)
 
         not sorted arr's els
-        _
+        -
  [2,3,6,1]
   -----
   sorted arr's els

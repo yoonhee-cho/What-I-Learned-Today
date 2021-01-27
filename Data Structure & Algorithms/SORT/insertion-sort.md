@@ -15,7 +15,7 @@
 - worst: O(n^2)time | O(1)space
 ```
 function insertionSort(arr){
-    for(let i = 1; i < arr.lengthl i++){
+    for(let i = 1; i < arr.length i++){
         let j = i
         while( 0 < j && arr[j-1] > arr[j] ){
             let temp = arr[j]
@@ -24,7 +24,7 @@ function insertionSort(arr){
             j -= 1
         }
     }
-    return arr
+return arr
 }
 ```
    <!-- not sorted arr's els

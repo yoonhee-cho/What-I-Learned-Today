@@ -1,14 +1,12 @@
-# Interview tips for all technical Interview
-# Work on problems that get asked during a JavaScript interview
-# Collaborate and Q&A
+# Problems that get asked during a JavaScript interview
 - Speaker: Dominique Canlas
 
 ## Interview Cheat Sheet :
 1. ***** Clarify what is being asked, what is confusing, expected input output, edge cases
 2. Ask how many questions they plan to ask so that you can pace yourself
 3. *********** Speak while you code 아는데 실천이 넘나 어려움 ㅠ_ㅠ 
-4. Write test cases for your code (Even before you start)  뭐 잘못이해하고있는지 인터뷰어가 캐치할수있음
-5. Be Prepared to use white board
+4. Write test cases for your code (Even before you start) 뭐 잘못이해하고있는지 인터뷰어가 캐치할수있음
+5. Be prepared to use white board
 
 - Useful Resources
 http://javascript.info/
@@ -18,53 +16,57 @@ https://leanpub.com/understandinges6/read
 
 - facebeook ui developer : javascript으로 다무러봄, foundational JavaScript이 리엑트보다중요 함... 
 
+## JavaScript Questions
+- highly looking at the library 혼자 복제해보기 low dash ???? 되게도움많이됨.
 
-## JavaScript
-- highly looking at the library 혼자 복제해보기 low dash ????
-- [Q1] only execute func2, after it has been called two times, after third times
-- 'CLOSURE'
+1. CLOSURE 
+- Execute function after x times
+
+- Create a function "after" that returns a new function where this new function executes the original function only after it has been executed x times
+
+
+- only execute func2, after it has been called two times, after third times
 - think skeleton of func body
-```
-function after(num, func) {
-    // keep track of calls
-    let count = 0;
-    if( count >= num ){
-        func();
-    }
-    else{
-        count += 1;
-    }
-    return function(){
 
-    }
-}
 ```
+Sample calls
+
+var newFunc1 = after(3, func1);
+var newFunc2 = after(2, func2);
+
 var func1 = () => console.log("fisrt one");
-var func2 = (x)=> console.log("the 2nd one)
+var func2 = (x)=> console.log("the 2nd one, x)
 
+newFunc1();
+newFunc1();
+newFunc1();
+newFunc1(); // actually calls func1()
 
-```
+newFunc2("a");
+newFunc2("a");
+newFunc2("a"); // actually calls func2()
+newFunc1(); // calls func1() again
+
 function after(num, func) {
-    // keep track of calls
     let count = 0;
     
     return function(x){
         if( count >= num ){
-        func(x);
+            return func(x);
         }
         else{
             count += 1;
         }
     }
 }
-```
+
 - keeps remember the count references it.
 - {} every curly braces set is closure
 
-```
-//위에서 args패스하지않아도 항상 available해
+
+- 위에서 args패스하지않아도 항상 available해
+
 function after(num, func) {
-    // keep track of calls
     let count = 0;
     
     return function(){
@@ -73,7 +75,7 @@ function after(num, func) {
         //.call() vs .apply() 꼭 나올 문제
         //   코마세퍼레이티드억셉  어레이 억셉
         
-        func.apply(null, arguments);
+        return func.apply(null, arguments);
         // why put null ? 
         // accept context as 1st arguments
         // we don't need context on this prob so we pass null
@@ -86,7 +88,46 @@ function after(num, func) {
 }
 ```
 
-## 2 Create Emitter Class
+# call, apply, bind - this 
+- call : this는 call을 사용하면, this를 다른 값으로 변경할 수 있다.
+```
+    const h1 = {name: "Yoon"};
+    const h2 = {name: "Philip"};
+    function i(){
+        return `hi ${this.name}`
+    }
+
+    i();        -> hi undefined
+    i.call(h1); -> hi Yoon
+    i.call(h2); -> hi Philip
+```
+
+```
+    function j(a,b){
+        this.aa = a;
+        this.bb = b;
+    }
+    j.call(h1, 1234, 5678) -> h1 = {name: "Yoon", aa: 1234, bb: 5678}
+```
+
+- apply : call과 작동원리는 같지만, call이 매개변수(paramenter)를 직접받는 구조라면, apply는  배열 그 자체를 매개변수로 대입할 수 있음
+```
+    j.apply(h1, ['aaa', 'bbb']); -> h1 = {name: "Yoon", aa: 'aaa', bb: 'bbb'}
+
+    const h3 = [1, 2, 5, 8, -10, 11, 234];
+    Math.min.apply(null, h3); -> -10
+    Math.max.apply(null, h3); -> 234
+```
+- bind : this 값을 바꿀 수 있다는 점은 call, apply랑 같다고 볼 수 있지만, bind는 this값을 영구적으로 바꿀 수 있다.
+```
+    const newJ = j.bind(h1);
+    newJ('ccc', 'ddd'); -> h1 = { name: 'Yoon', aa: 'ccc', bb: 'ddd'}
+    newJ.call(h2, 'eee', 'fff'); -> h1 = { name: 'Yoon', aa: 'eee', bb: 'fff'} / h2 = {name : 'Philip}
+```
+- bind를 쓰고 난 후, call이나 apply를 쓰면 this 값이 지정한대로 대입이 안되서 같이 쓰지 않는 것이 좋음
+- 근데 왜 이런 method들이 있어야하지? -> this를 자유자재로 설정할 수 있다는 게 객체지향프로그램의 기초가 되고, 단순히 선언하고사용하는 것이 아니라 필요한 부분에 조합해서 최적의 성능을 만들어내는 기초.. 
+
+2. Create Emitter Class
 - create a class/function that returns an Emiiter Object. This object allows us to subscribe to an event and execute a callback whenever that event is triggered. The emit function will trigger all functions subscribed to an event and pass all supplied arguments
 
 - A Callback can be removed from being subscribed to an event
@@ -192,4 +233,4 @@ https://codesandbox.io/s/jovial-jepsen-v27et?file=/src/emitter.js
 - 크레이그리스트 extra help 
 - 새로운 언어배우는데 ? 하나 배워놓으면 다른거 배우는 건 그렇게 어렵지않아........?
 - 1 : one object oriented language & 1: script language like javascript
-- Survey: http://bit.ly/3orpmGh   Subscription for mentors: https://www.skilledinc.com/subscription-mentor (Dominique is page 4)  Event page: https://leads.skilledinc.com/skilled-events/   Learn more about Skilled: https://www.skilledinc.com/job-seeker
+- Survey: http://bit.ly/3orpmGh Subscription for mentors: https://www.skilledinc.com/subscription-mentor(Dominique is page 4)Event page: https://leads.skilledinc.com/skilled-events/ Learn more about Skilled: https://www.skilledinc.com/job-seeker

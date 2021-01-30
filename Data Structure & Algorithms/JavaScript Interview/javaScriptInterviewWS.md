@@ -15,9 +15,9 @@ http://ejohn.org/apps/learn/
 https://leanpub.com/understandinges6/read
 
 - facebeook ui developer : javascript으로 다무러봄, foundational JavaScript이 리엑트보다중요 함... 
+- highly looking at the library 혼자 복제해보기 low dash ???? 되게도움많이됨.
 
 ## JavaScript Questions
-- highly looking at the library 혼자 복제해보기 low dash ???? 되게도움많이됨.
 
 1. CLOSURE 
 - Execute function after x times
@@ -128,7 +128,7 @@ function after(num, func) {
 - 근데 왜 이런 method들이 있어야하지? -> this를 자유자재로 설정할 수 있다는 게 객체지향프로그램의 기초가 되고, 단순히 선언하고사용하는 것이 아니라 필요한 부분에 조합해서 최적의 성능을 만들어내는 기초.. 
 
 2. Create Emitter Class
-- create a class/function that returns an Emiiter Object. This object allows us to subscribe to an event and execute a callback whenever that event is triggered. The emit function will trigger all functions subscribed to an event and pass all supplied arguments
+- create a class/function that returns an Emiiter Object. This object allows us to subscribe to an event and execute a callback whenever that event is triggered. The emit function will trigger all functions subscribed to an event and passes all supplied arguments
 
 - A Callback can be removed from being subscribed to an event
 
@@ -203,7 +203,7 @@ myEmit.emit("foo", 1, 2);
 export default Emitter;
 ```
 
-- No there isn’t. Ruby refers to it as “hash”, JS as “object”, and python as “dictionary”
+- Ruby refers to it as “hash”, JS as “object”, and python as “dictionary”
 
 - Test spec 쓰는게 중요, 
 

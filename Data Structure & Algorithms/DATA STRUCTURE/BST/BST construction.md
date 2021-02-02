@@ -29,7 +29,7 @@
 - grab the smallest value in the right sub tree
 - grab (12) value, erase (10), replace (10) with (12), 
 
-
+## Solution
 - avg   : time : O(log(n))  |   space: O(1) // recursion 쓰면 O(log(n)) O(d) : depth of the tree (because of usage of callstack)
 - worst : time : O(n)       |   space: O(1)
 - unbalancedd tree cannot be elimated half of the tree

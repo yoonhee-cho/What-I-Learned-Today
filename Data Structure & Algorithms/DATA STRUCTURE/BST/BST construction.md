@@ -130,13 +130,13 @@ class BST {
     return this;
   }
 	
-	getMinVal(){
-		let currNode = this;
-		while(currNode.left !== null){
-			currNode = currNode.left
-		}
-		return currNode.value
-	}
+    getMinVal(){
+        let currNode = this;
+        while(currNode.left !== null){
+            currNode = currNode.left
+        }
+    return currNode.value
+    }
 }
 
 ```

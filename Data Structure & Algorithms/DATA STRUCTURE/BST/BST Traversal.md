@@ -11,9 +11,9 @@
 
 ## 1. in-order : L - Root - R : [1, 2, 5, 5,10, 15, 22]
 
-## 2. pre-order : Root - L - R : [10, 5, 2, 1, 5, 15, 22]
+## 2. pre-order : Root - L - R : [10, 5, 2, 1, 5, 15, 22] 룻이 먼저라서 프리오더
 
-## 3. post-order : L - R - Root : [1, 2, 5, 5, 22, 15, 10]
+## 3. post-order : L - R - Root : [1, 2, 5, 5, 22, 15, 10] 룻이 나중에 와서 포스트 오더 
 
 ## Solution
 

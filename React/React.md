@@ -115,3 +115,5 @@ return (
 - General interviews : small company: react, css - bigger company: js, 
 - business eco system , bussiness problems into technical solutions , 
 - 
+
+![Alt text](<blockquote class="imgur-embed-pub" lang="en" data-id="a/fCk0Vsh" data-context="false" ><a href="//imgur.com/a/fCk0Vsh"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>)
